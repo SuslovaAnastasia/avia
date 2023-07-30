@@ -1,0 +1,56 @@
+@import '../../styles/variables.scss';
+@import '../../styles/fonts.scss';
+.ticket {
+  list-style: none;
+  margin-bottom: 47px;
+  background-color: $second-color;
+  padding: 40px 40px 30px 40px;
+  border-radius: 10px;
+  &:last-child {
+    margin: 0;
+  }
+  .price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      font-family: 'Inter';
+      font-weight: 700;
+      font-size: 32px;
+      color: $purple-color;
+    }
+    margin-bottom: 33px;
+  }
+  .infoList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    .infoItem {
+      font-family: 'Inter';
+      font-weight: 500;
+      font-size: 16px;
+      div:first-child {
+        color: $light-purple-color;
+        margin-bottom: 10px;
+      }
+      div:last-child {
+        color: $purple-color;
+      }
+      &:last-child {
+        margin-right: 30px;
+      }
+    }
+  }
+  @media (max-width: 540px) {
+    padding: 40px 25px 25px 25px;
+    .infoList {
+      .infoItem {
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

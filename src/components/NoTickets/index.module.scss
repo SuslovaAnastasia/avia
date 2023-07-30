@@ -1,0 +1,10 @@
+@import '../../styles/variables.scss';
+@import '../../styles/fonts.scss';
+.noTickets {
+  color: $purple-color;
+  margin: 0 auto;
+  width: fit-content;
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 24px;
+}

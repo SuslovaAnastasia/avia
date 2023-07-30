@@ -1,0 +1,76 @@
+@import '../styles/variables.scss';
+@import '../styles/fonts.scss';
+.app {
+  .container {
+    max-width: 1050px;
+    margin: 0px auto;
+    padding: 0 20px;
+    .header {
+      margin-bottom: 20px;
+      margin-top: 20px;
+      .logo {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        span {
+          margin-left: 35px;
+          font-family: Inter, sans-serif;
+          font-weight: 700;
+          font-size: 24px;
+          color: $purple-color;
+        }
+      }
+      @media (max-width: 760px) {
+        .logo {
+          justify-content: center;
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+    .main {
+      padding: 50px 0;
+
+      .ticketsBlock {
+        display: grid;
+        grid-template-areas:
+          'filters sorter sorter'
+          'filters tickets tickets'
+          'filters button button';
+        align-items: start;
+        .tickets {
+          margin: 0;
+          margin-top: 20px;
+          padding: 0;
+          grid-area: tickets;
+        }
+        .lazyBtn {
+          grid-area: button;
+          margin-top: 40px;
+          background-color: $purple-color;
+          width: 100%;
+          padding: 15px 0;
+          font-family: 'Inter';
+          font-weight: 700;
+          font-size: 24px;
+          color: #f7f9f7;
+          border-radius: 10px;
+          cursor: pointer;
+          transition: background-color linear 0.2s;
+          &:hover {
+            background-color: $purple-color-hover;
+            transition: background-color linear 0.2s;
+          }
+        }
+        @media (max-width: 1000px) {
+          grid-template-areas:
+            'sorter'
+            'filters'
+            'tickets'
+            'button';
+        }
+      }
+    }
+  }
+}

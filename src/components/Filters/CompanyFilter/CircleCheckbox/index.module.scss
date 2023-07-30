@@ -1,0 +1,96 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/fonts.scss';
+.wrapper {
+  display: flex;
+  align-items: center;
+  input[type='checkbox'] {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+  .checkbox {
+    position: relative;
+    display: inline-block;
+    height: 19px;
+    width: 19px;
+    background-color: transparent;
+    border: 1px solid $purple-color;
+    margin-right: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .active {
+    position: relative;
+    display: inline-block;
+    height: 19px;
+    width: 19px;
+    background-color: transparent;
+    border: 1px solid $purple-color;
+    margin-right: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    &::after {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      content: '';
+      width: 15px;
+      height: 15px;
+      background-color: $purple-color;
+      border-radius: 50%;
+    }
+  }
+  .text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: $light-purple-color;
+    cursor: pointer;
+    transition: color linear 0.2s;
+    &:hover {
+      transition: color linear 0.2s;
+      color: #8700b8;
+    }
+  }
+  .activeText {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #8700b8;
+    cursor: pointer;
+  }
+  @media (max-width: 1000px) {
+    .checkbox {
+      border: 1px solid #fff;
+    }
+    .active {
+      border: 1px solid #fff;
+      &::after {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        content: '';
+        width: 15px;
+        height: 15px;
+        background-color: #fff;
+        border-radius: 50%;
+      }
+    }
+    .text {
+      color: #fff;
+      &:hover {
+        transition: none;
+        color: #fff;
+      }
+    }
+    .activeText {
+      color: #fff;
+    }
+  }
+}
